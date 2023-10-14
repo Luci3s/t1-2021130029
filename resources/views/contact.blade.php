@@ -24,17 +24,17 @@
             <div class="mb-3 col-md-8 col-sm-12">
                 <label for="full_name" class="form-label">Full Name</label>
                 <input type="text" class="form-control" name="full_name">
-                value="{{ old('full_name') }}">
+                {{-- value="{{ old('full_name') }}"> --}}
             </div>
             <div class="mb-3 col-md-8 col-sm-12">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" name="email">
-                value="{{ old('email') }}">
+                {{-- value="{{ old('email') }}"> --}}
             </div>
             <div class="mb-3 col-md-8 col-sm-12">
                 <label for="phone_number" class="form-label">Phone Number</label>
                 <input type="text" class="form-control" name="phone_number">
-                value="{{ old('phone_number') }}">
+                {{-- value="{{ old('phone_number') }}"> --}}
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

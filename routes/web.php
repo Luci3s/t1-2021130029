@@ -35,14 +35,22 @@ Route::get('/about', function () {
 });
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\BookController;
 
 Route::get('/about', [AboutController::class, 'index']);
 
-use App\Http\Controllers\LandingController;
+
 
 Route::get('/', LandingController::class);
 
-use App\Http\Controllers\ContactController;
+
 
 Route::get('/contact-us', [ContactController::class, 'index']);
 Route::post('/contact-us', [ContactController::class, 'store']);
+
+Route::get('/book', [BookControllerController::class, 'index']);
+Route::post('/book', [BookControllerController::class, 'store']);
+
+Route::resource('book', BookController::class);
