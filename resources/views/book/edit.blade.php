@@ -37,7 +37,17 @@
                 </div>
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="body" class="form-label">Kategori</label>
-                    <input class="form-control" id=kategori name="kategori" value={{ old('body', $book->kategori) }}>
+                    <select class="form-select" id="kategori" name="kategori">
+                        <option {{ old('kategori', $book->kategori) == 'uncategprized' ? 'selected' : '' }} value="uncategorized">Uncategorized</option>
+                        <option {{ old('kategori', $book->kategori) == 'sci-fi' ? 'selected' : '' }} value="sci-fi">Science Fiction</option>
+                        <option {{ old('kategori', $book->kategori) == 'novel' ? 'selected' : '' }} value="novel">Novel</option>
+                        <option {{ old('kategori', $book->kategori) == 'history' ? 'selected' : '' }} value="history">History</option>
+                        <option {{ old('kategori', $book->kategori) == 'biography' ? 'selected' : '' }} value="biography">Biography</option>
+                        <option {{ old('kategori', $book->kategori) == 'romance' ? 'selected' : '' }} value="romance">Romance</option>
+                        <option {{ old('kategori', $book->kategori) == 'education' ? 'selected' : '' }} value="education">Education</option>
+                        <option {{ old('kategori', $book->kategori) == 'culinary' ? 'selected' : '' }} value="culinary">Culinary</option>
+                        <option {{ old('kategori', $book->kategori) == 'comic' ? 'selected' : '' }} value="comic">Comic</option>
+                    </select>
                 </div>
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="body" class="form-label">Penerbit</label>

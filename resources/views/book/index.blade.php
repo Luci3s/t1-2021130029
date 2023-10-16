@@ -38,7 +38,41 @@
                             </a>
                         </td>
                         <td>{{ $book->halaman }}</td>
-                        <td>{{ $book->kategori }}</td>
+                        <td>
+
+                        @switch($book->kategori)
+                            @case('uncategorized')
+                                Uncategorized
+                                @break
+                            @case('sci-fi')
+                                Science Fiction
+                                @break
+                            @case('novel')
+                                Novel
+                                @break
+                            @case('history')
+                                History
+                                @break
+                            @case('biography')
+                                Biography
+                                @break
+                            @case('romance')
+                                Romance
+                                @break
+                            @case('education')
+                                Education
+                                @break
+                            @case('culinary')
+                                Culinary
+                                @break
+                            @case('comic')
+                                Comic
+                                @break
+                            @default
+
+                        @endswitch
+
+                        </td>
                         <td>{{ $book->penerbit }}</td>
                         <td>{{ $book->created_at }}</td>
                         <td>{{ $book->updated_at }}</td>

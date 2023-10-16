@@ -35,7 +35,17 @@
                 </div>
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="title" class="form-label">Kategori</label>
-                    <input type="text" class="form-control" id="kategori" name="kategori" value="{{ old('kategori') }}">
+                    <select class="form-select" id="kategori" name="kategori">
+                        <option {{ old('kategori') == 'uncategprized' ? 'selected' : '' }} value="uncategorized">Uncategorized</option>
+                        <option {{ old('kategori') == 'sci-fi' ? 'selected' : '' }} value="sci-fi">Science Fiction</option>
+                        <option {{ old('kategori') == 'novel' ? 'selected' : '' }} value="novel">Novel</option>
+                        <option {{ old('kategori') == 'history' ? 'selected' : '' }} value="history">History</option>
+                        <option {{ old('kategori') == 'biography' ? 'selected' : '' }} value="biography">Biography</option>
+                        <option {{ old('kategori') == 'romance' ? 'selected' : '' }} value="romance">Romance</option>
+                        <option {{ old('kategori') == 'education' ? 'selected' : '' }} value="education">Education</option>
+                        <option {{ old('kategori') == 'culinary' ? 'selected' : '' }} value="culinary">Culinary</option>
+                        <option {{ old('kategori') == 'comic' ? 'selected' : '' }} value="comic">Comic</option>
+                    </select>
                 </div>
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="title" class="form-label">Penerbit</label>
