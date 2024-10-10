@@ -5,14 +5,12 @@
 @section('content')
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
-            <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
-            <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
-                efficiently about what’s most interesting in this post’s contents.</p>
-            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+            <h1 class="display-4 fst-italic">Selamat Datang di Supermarket kami!</h1>
+            <p class="lead my-3">Dimana kalian mendapatkan barang-barang atau products yang kalian butuhkan!</p>
         </div>
     </div>
 
-    {{-- Articles Card --}}
+    {{-- Shopss Card --}}
     <div class="row mb-2">
         @forelse ($shops as $shop)
             <div class="col-md-6">
@@ -33,6 +31,7 @@
                         <p class="card-text mb-auto">
                             {{ Str::limit($shop->description, 50, ' ...') }}
                         </p>
+                        <a href="{{ route('shops.show', $shop->id) }}" class="btn btn-primary">Continue Product</a> <!-- Link untuk melanjutkan ke detail produk -->
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         @if ($shop->product_img)
@@ -48,7 +47,7 @@
             <div class="col-md-12">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
-                        <h2 class="card-text mb-auto">No articles found.</h2>
+                        <h2 class="card-text mb-auto">No Products found.</h2>
                     </div>
                 </div>
             </div>
