@@ -42,7 +42,7 @@
             <table class="table table-bordered mb-5">
                 <thead>
                     <tr class="table-success">
-                        <th scope="col">#</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Product Name</th>
                         <th scope="col">Description</th>
                         <th scope="col">Retail Price</th>

@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'Landing Page')
+@section('title', 'Mega Market')
 
 @section('content')
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
@@ -31,7 +31,7 @@
                         <p class="card-text mb-auto">
                             {{ Str::limit($shop->description, 50, ' ...') }}
                         </p>
-                        <a href="{{ route('shops.show', $shop->id) }}" class="btn btn-primary">Continue Product</a> <!-- Link untuk melanjutkan ke detail produk -->
+                        <a href="{{ route('shops.show', $shop->id) }}" class="btn btn-primary">Baca Lebih Lanjut!</a> <!-- Link untuk melanjutkan ke detail produk -->
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         @if ($shop->product_img)
@@ -52,7 +52,8 @@
                 </div>
             </div>
         @endforelse
-
+        <div class="d-flex justify-content-center">
         {{ $shops->links() }}
+        </div>
     </div>
 @endsection

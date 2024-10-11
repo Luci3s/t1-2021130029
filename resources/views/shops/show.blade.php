@@ -4,7 +4,9 @@
 
 @section('content')
 <div class="container">
+    <div class="text-center">
     <h1>{{ $shop->product_name }}</h1>
+    </div>
     <p>{{ $shop->description }}</p>
     <p><strong>Retail Price:</strong> Rp {{ number_format($shop->retail_price, 0, ',', '.') }}</p>
     <p><strong>Wholesale Price:</strong> Rp {{ number_format($shop->wholesale_price, 0, ',', '.') }}</p>
